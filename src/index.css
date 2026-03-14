@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", Helvetica, sans-serif;
+  --color-brand-green: #16a34a;
+  --color-brand-green-dark: #0b6b3a;
+  --color-brand-red: #dc2626;
+  --color-brand-red-dark: #b01219;
+}
+
+body {
+  font-family: "Poppins", Helvetica, sans-serif;
+  margin: 0;
+}
