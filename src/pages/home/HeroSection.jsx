@@ -28,11 +28,11 @@ export const HeroSection = () => {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:py-24 lg:py-32 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 md:py-20 lg:py-32 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
           <div className="flex-1 space-y-8">
             <div className="space-y-2">
-              <h1 className="font-bold text-slate-900 text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2]">
+              <h1 className="font-bold text-slate-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.2]">
                 Transformez
                 <br />
                 chaque{" "}
@@ -40,14 +40,14 @@ export const HeroSection = () => {
                   produit
                 </span>
               </h1>
-              <h1 className="font-bold text-slate-900 text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2]">
+              <h1 className="font-bold text-slate-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.2]">
                 en expérience de
                 <br />
                 jeu
               </h1>
             </div>
 
-            <p className="text-slate-600 text-xl sm:text-2xl leading-8 max-w-xl">
+            <p className="text-slate-600 text-base sm:text-lg md:text-xl lg:text-2xl leading-7 sm:leading-8 max-w-xl">
               YouCanWin connecte vos marques aux fans de football à travers des
               mécaniques de gamification innovantes.{" "}
               <span className="font-semibold text-slate-900">
@@ -55,10 +55,10 @@ export const HeroSection = () => {
               </span>
             </p>
 
-            <div className="flex flex-wrap gap-8 sm:gap-12">
+            <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12">
               {STATS.map((stat) => (
                 <div key={stat.label} className="flex flex-col gap-1">
-                  <span className={`font-bold text-3xl sm:text-4xl ${stat.color}`}>
+                  <span className={`font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl ${stat.color}`}>
                     {stat.value}
                   </span>
                   <span className="font-medium text-slate-600 text-sm">
@@ -68,15 +68,21 @@ export const HeroSection = () => {
               ))}
             </div>
 
-            <div className="flex flex-nowrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4 lg:flex-nowrap">
               <Button
                 variant="primary"
                 size="lg"
+                className="w-full sm:w-auto"
                 rightIcon={<ArrowRight color="white" />}
               >
                 Voir la démo
               </Button>
-              <Button variant="secondary" size="lg" leftIcon={<HelpCircle className="w-5 h-5" />}>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto"
+                leftIcon={<HelpCircle className="w-5 h-5" />}
+              >
                 Comment ça marche
               </Button>
             </div>

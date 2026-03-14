@@ -36,11 +36,11 @@ export const SecondaryHeroSection = () => {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-16">
           <img
             src={fansImage}
             alt="Fans de football avec smartphones"
-            className="w-full min-w-[400px] max-w-lg object-contain block rounded-2xl"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain block rounded-2xl"
           />
 
           <div className="flex-1 space-y-6">
@@ -49,7 +49,7 @@ export const SecondaryHeroSection = () => {
               Solution complète
             </span>
 
-            <h2 className="font-bold text-slate-900 text-3xl sm:text-4xl leading-tight whitespace-nowrap">
+            <h2 className="font-bold text-slate-900 text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-tight lg:whitespace-nowrap">
               Le terrain de jeu digital de votre marque
             </h2>
 

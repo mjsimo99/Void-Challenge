@@ -1,37 +1,41 @@
 import { ChevronRight } from "lucide-react";
+import albumImage from "../../assets/Album de collection digitale.png";
+import quizImage from "../../assets/Quiz Football.png";
+import tombolaImage from "../../assets/Tombola digitale.png";
+import pronosticsImage from "../../assets/Pronostics.png";
 
 const GAMES = [
   {
     id: 1,
     title: "Album Digital 2025",
     description: "Collection de cartes avec échanges et défis.",
+    image: albumImage,
     badge: { label: "STAR", className: "bg-gradient-to-r from-green-600 to-green-800" },
     showDiscover: true,
-    gradientBg: true,
   },
   {
     id: 2,
     title: "Quiz Football",
     description: "Questions sur l'actualité et l'histoire du foot.",
+    image: quizImage,
     badge: { label: "BIENTÔT", className: "bg-slate-600" },
     showDiscover: false,
-    gradientBg: false,
   },
   {
     id: 3,
     title: "Tombola digitale",
     description: "Tirages au sort avec lots sponsorisés.",
+    image: tombolaImage,
     badge: null,
     showDiscover: false,
-    gradientBg: false,
   },
   {
     id: 4,
     title: "Pronostics",
     description: "Prédictions de matchs et classements.",
+    image: pronosticsImage,
     badge: null,
     showDiscover: false,
-    gradientBg: false,
   },
 ];
 
@@ -54,11 +58,10 @@ export const GameCatalogSection = () => {
               key={game.id}
               className="relative flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              <div
-                className={`h-52 bg-gradient-to-br ${
-                  game.gradientBg ? "from-green-50 to-red-50" : "from-slate-100 to-slate-200"
-                }`}
-                aria-hidden="true"
+              <img
+                src={game.image}
+                alt={game.title}
+                className="h-52 w-full object-cover"
               />
               <div className="flex flex-col gap-2 p-6">
                 <h3 className="font-semibold text-slate-900">{game.title}</h3>
