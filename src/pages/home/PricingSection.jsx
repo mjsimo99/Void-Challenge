@@ -1,9 +1,10 @@
-import { Check, Layers } from "lucide-react";
+import { Check, Zap, TrendingUp, Globe } from "lucide-react";
 import { Button } from "../../components/Button";
 
 const PLANS = [
   {
     name: "Starter",
+    Icon: Zap,
     tagline: "Campagne locale",
     description: "Idéal pour tester sur un marché",
     features: [
@@ -22,6 +23,8 @@ const PLANS = [
   },
   {
     name: "Scale",
+    Icon: TrendingUp,
+    iconClass: "bg-white text-red-600 border border-red-200",
     tagline: "Expansion nationale",
     description: "Pour des campagnes d'envergure",
     features: [
@@ -41,6 +44,7 @@ const PLANS = [
   },
   {
     name: "Enterprise",
+    Icon: Globe,
     tagline: "Solution globale",
     description: "Pour les groupes internationaux",
     features: [
@@ -75,7 +79,9 @@ export const PricingSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
-          {PLANS.map((plan) => (
+          {PLANS.map((plan) => {
+            const Icon = plan.Icon;
+            return (
             <div
               key={plan.name}
               className={`relative flex flex-col p-8 rounded-2xl bg-white border ${
@@ -89,8 +95,8 @@ export const PricingSection = () => {
                   POPULAIRE
                 </div>
               )}
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-600 mb-4">
-                <Layers className="w-6 h-6" />
+              <div className={`flex h-12 w-12 items-center justify-center rounded-xl mb-4 ${plan.iconClass || "bg-green-50 text-green-600"}`}>
+                <Icon className="w-6 h-6" />
               </div>
               <h3 className="font-semibold text-slate-900 text-xl mb-1">{plan.name}</h3>
               <p className="text-green-600 font-medium text-sm mb-2">{plan.tagline}</p>
@@ -114,7 +120,8 @@ export const PricingSection = () => {
                 {plan.cta}
               </Button>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

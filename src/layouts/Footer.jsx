@@ -1,5 +1,4 @@
 import {
-  Leaf,
   Twitter,
   Facebook,
   Instagram,
